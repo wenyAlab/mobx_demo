@@ -3,6 +3,9 @@ import { observer, inject} from 'mobx-react';
 import {  Image, Grid, List} from 'semantic-ui-react';
 import BookListItem from './BookListItem'
 import {bookData } from './mock';
+import RightSide from './RightSide';
+import './list.css';
+
 @inject('todos')
 @observer
 class AppList extends React.Component{
@@ -45,15 +48,15 @@ class AppList extends React.Component{
           <Button content='add' onClick={()=>this.addTitle(this.state.addText)} />
         */}
 
-        <div style={{width: '1000px',margin: '0 auto'}}>
+        <div >
           <Grid>
             <Grid.Column width={10}>
-              <List divided verticalAlign='middle'>            
+              <List className="book_list">
                 <BookListItem bookList={bookData.books}/>
               </List>
             </Grid.Column>
             <Grid.Column width={6}>
-              <Image src='https://react.semantic-ui.com/images/wireframe/paragraph.png' />
+              <RightSide />
             </Grid.Column>
           </Grid>
         </div>

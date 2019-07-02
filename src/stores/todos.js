@@ -21,4 +21,4 @@ class Todos {
 
 const todos = new Todos();
 
-export default todos;
+export {todos};

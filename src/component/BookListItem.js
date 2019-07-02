@@ -21,13 +21,20 @@ class AppList extends React.Component{
     return (
       bookList&&bookList.length>0&&bookList.map(i => (
         <List.Item key={i.id}>
-          <Image src={i.image&&i.image} style={{width: '90px', height: '126px'}} />
+          <Image
+          src={i.image&&i.image}
+          style={{width: '90px', height: '126px'}}
+          />
           <List.Content>
-            <List.Header as='a'>{i.title}</List.Header>
+            <List.Header as='a' href={`${i.url}?id=${i.id}&apikey=0b2bdeda43b5688921839c8ecb20399b`}>{i.title}</List.Header>
             <List.Description>
-              <span>{i.origin_title}</span> 
-              <div>{`${mapData(i.author)}/${mapData(i.translator)}/${i.publisher}/${i.pubdate}/${i.price}`}</div>
-              <div>
+              {
+                i.origin_title&&
+                <span className='origin_title'>{i.origin_title}</span> 
+
+              }
+              <div className='appList_translator'>{`${mapData(i.author)}/${mapData(i.translator)}/${i.publisher}/${i.pubdate}/${i.price}`}</div>
+              <div className='appList_rating'>
                 <RatingComponent data={i.rating}/>
               </div>
               

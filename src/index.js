@@ -5,11 +5,7 @@ import 'semantic-ui-css/semantic.min.css'
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { Provider  } from 'mobx-react';
-import todos from './stores/todos';
-
-const stores = {
-  todos,
-}
+import * as stores from './stores';
 
 ReactDOM.render(
   <Provider {...stores}>
