@@ -1,5 +1,6 @@
 import React from 'react';
 import { Menu } from 'semantic-ui-react';
+import './index.css';
 
 class Header extends React.Component{
   constructor(props){
@@ -18,11 +19,11 @@ class Header extends React.Component{
   render(){
     const { activeKey} = this.state;
     return (
-      <div style={{backgroundColor: '#e9e9e2'}}>
+      <div className="header_wrapper">
         <Menu
         pointing
         secondary
-        style={{ width: 1000, margin: '0 auto'}}
+        className="header_menu"
         >
           <Menu.Item name='豆瓣书店' active={activeKey === 'home'} onClick={this.handleMenuClick} />
           <Menu.Item name='电子图书' active={activeKey === 'about'} onClick={this.handleMenuClick} />

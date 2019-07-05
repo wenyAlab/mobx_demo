@@ -1,0 +1,9 @@
+.columns_image {
+  width: 90px;
+  height: 126px;
+}
+.columns_image .columns_title {
+  width: 100%;
+  text-align: center;
+  margin-top: 6px;
+}

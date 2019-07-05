@@ -1,16 +1,17 @@
 import React from 'react'
-import { Image, List, Grid } from 'semantic-ui-react'
+import { Image, Grid } from 'semantic-ui-react'
+import './index.css';
 
-const HorizontalList = ({data}) => (
+const ColumnsList = ({data}) => (
   <Grid>
     {
       data&&data.map(i => (
         <Grid.Column key={i.id} width={5}>
           <Image
           src={i.image}
-          style={{width: '90px', height: '126px'}}
+          className="columns_image"
           />
-          <div style={{width: '100%', textAlign: 'center',marginTop: 6}}>
+          <div className="columns_title">
             {i.title}
           </div>
         </Grid.Column>
@@ -19,4 +20,4 @@ const HorizontalList = ({data}) => (
   </Grid>
 )
 
-export default HorizontalList
+export default ColumnsList
