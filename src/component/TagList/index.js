@@ -4,19 +4,17 @@ import {  Label } from 'semantic-ui-react';
 import './index.css';
 
 const colors = [
-  'red',
-  'orange',
-  'yellow',
-  'olive',
-  'green',
-  'teal',
-  'blue',
-  'violet',
-  'purple',
-  'pink',
-  'brown',
-  'grey',
-  'black',
+  '小说',
+  '随笔',
+  '日本文学',
+  '散文',
+  '诗歌',
+  '童话',
+  '名著',
+  '港台',
+  '漫画',
+  '推理',
+  '科幻',
 ]
 
 class TagList extends React.Component{
@@ -33,6 +31,9 @@ class TagList extends React.Component{
             {color}
           </Label>
         ))}
+        <Label className="tag_label" as='a'>
+          更多>>
+        </Label>
       </React.Fragment>
 
     )

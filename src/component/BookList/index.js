@@ -21,7 +21,7 @@ class BookList extends React.Component{
     const { bookList} = this.props;
     return (
       bookList&&bookList.length>0&&bookList.map(i => (
-        <List.Item key={i.id}>
+        <List.Item key={i.id} className="book_list_item">
           <Image
           src={i.image&&i.image}
           className="book_list_item_image"
