@@ -18,14 +18,16 @@ class Header extends React.Component{
   render(){
     const { activeKey} = this.state;
     return (
-      <Menu
-      pointing
-      secondary
-      style={{margin: '20px 0'}}
-      >
-        <Menu.Item name='home' active={activeKey === 'home'} onClick={this.handleMenuClick} />
-        <Menu.Item name='about' active={activeKey === 'about'} onClick={this.handleMenuClick} />
-      </Menu>
+      <div style={{backgroundColor: '#e9e9e2'}}>
+        <Menu
+        pointing
+        secondary
+        style={{ width: 1000, margin: '0 auto'}}
+        >
+          <Menu.Item name='home' active={activeKey === 'home'} onClick={this.handleMenuClick} />
+          <Menu.Item name='about' active={activeKey === 'about'} onClick={this.handleMenuClick} />
+        </Menu>
+      </div>
     )
   }
 }

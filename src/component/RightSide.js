@@ -3,6 +3,7 @@ import React from 'react';
 import './list.css';
 import TagList from './TagList';
 import HorizontalList from './HorizontalList';
+import {HotBookList} from './HotBookList';
 import {bookData } from './mock';
 
 const tagList = [
@@ -20,8 +21,12 @@ class RightSide extends React.Component{
         <div style={{marginBottom:20}}>
           <h3>热门标签</h3>
           {
-            tagList.map(i=>(<TagList title={i}/>))
+            tagList.map(i=>(<TagList key={i} title={i}/>))
           }
+        </div>
+        <div style={{marginBottom:20}}>
+          <h3>畅销图书榜</h3>
+          <HotBookList data={bookData.books}/>
         </div>
         <div>
           <h3>豆瓣图书 250</h3>
