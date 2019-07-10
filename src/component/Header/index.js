@@ -6,7 +6,7 @@ class Header extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      activeKey: 'home',
+      activeKey: 'store',
     }
   }
 
@@ -25,8 +25,8 @@ class Header extends React.Component{
         secondary
         className="header_menu"
         >
-          <Menu.Item name='豆瓣书店' active={activeKey === 'home'} onClick={this.handleMenuClick} />
-          <Menu.Item name='电子图书' active={activeKey === 'about'} onClick={this.handleMenuClick} />
+          <Menu.Item name='store' active={activeKey === 'store'} onClick={this.handleMenuClick} />
+          <Menu.Item name='ebook' active={activeKey === 'ebook'} onClick={this.handleMenuClick} />
         </Menu>
       </div>
     )
