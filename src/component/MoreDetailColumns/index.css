@@ -15,6 +15,19 @@
 #horizontal_item {
   margin-left: 0 !important;
   width: 50%;
+  margin-bottom: 20px;
+}
+
+.list .down_in_header{
+  display: inline-block;
+  margin-top: 10px;
+}
+.list .down_in_header .origin_title{
+  margin-top: 6px;
+  display: inline-block;
+}
+.list .down_in_header .item_tags{
+  margin-top: 6px;
 }
 .list .horizontal_item .image {
   width: 100px;

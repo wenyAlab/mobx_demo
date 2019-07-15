@@ -1,7 +1,7 @@
 import React from 'react';
 
 import TagList from '../TagList';
-import HorizontalList from '../ColumnsList';
+import ColumnsList from '../ColumnsList';
 import {SimpleList} from '../SimpleList';
 import {bookData } from '../mock';
 import './index.css';
@@ -29,8 +29,13 @@ class RightLayout extends React.Component{
           <SimpleList data={bookData.books}/>
         </div>
         <div className="layout_box">
-          <h3>豆瓣图书 250</h3>
-          <HorizontalList data={bookData.books}/>
+          <ColumnsList
+          data={bookData.books}
+          title="豆瓣图书 250"
+          actions={[
+            {title: '更多', path: '/'}
+          ]}
+          />
         </div>
       </React.Fragment>
 
