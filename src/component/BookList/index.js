@@ -5,17 +5,12 @@ import { RatingComponent } from '../Rating';
 import './index.css';
 
 const mapData = (arr) => {
-  return arr&&arr.length>0?arr.map(i=> i):'';
+  // return arr&&arr.length>0?arr.map(i=> i):'';
+  return arr&&arr.length>0&&(arr.length>4?arr[0]:arr.map(i=> i));
 }
 @inject('books')
 @observer
 class BookList extends React.Component{
-  constructor(props) {
-    super(props);
-    this.state = {
-      addText:'',
-    }
-  }
 
   render(){
     const { bookList} = this.props;
