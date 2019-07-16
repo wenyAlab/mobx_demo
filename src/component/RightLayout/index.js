@@ -4,6 +4,8 @@ import TagList from '../TagList';
 import ColumnsList from '../ColumnsList';
 import {SimpleList} from '../SimpleList';
 import {bookData } from '../mock';
+import { observer, inject} from 'mobx-react';
+
 import './index.css';
 
 const tagList = [
@@ -13,9 +15,12 @@ const tagList = [
   '生活',
 ];
 
+@inject('books')
+@observer
 class RightLayout extends React.Component{
 
   render(){
+    const { books } = this.props;
     return (
       <React.Fragment>
         <div className="layout_box">
@@ -26,11 +31,11 @@ class RightLayout extends React.Component{
         </div>
         <div className="layout_box">
           <h3>畅销图书榜</h3>
-          <SimpleList data={bookData.books}/>
+          <SimpleList data={books.booksList.items}/>
         </div>
         <div className="layout_box">
           <ColumnsList
-          data={bookData.books}
+          data={books.booksList.items}
           title="豆瓣图书 250"
           actions={[
             {title: '更多', path: '/'}

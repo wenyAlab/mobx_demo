@@ -3,8 +3,8 @@ import { observer, inject} from 'mobx-react';
 import {  Image, Grid, List} from 'semantic-ui-react';
 import BookListItem from '../BookList'
 import MoreDetailColumns from '../MoreDetailColumns'
+import ListBoxWrapper from '../ListBoxWrapper'
 import RightSide from '../RightLayout';
-import './index.css';
 
 
 @inject('books')
@@ -25,19 +25,26 @@ class MainContent extends React.Component{
         <div >
           <Grid>
             <Grid.Column width={10}>
+            {/*
               <List className="book_list">
                 <BookListItem bookList={books.booksList.items}/>
               </List>
-              {/*
-                <MoreDetailColumns
-                  data={books.booksList.items}
-                  title="新书速递"
-                  actions={[
-                    {title: '更多', path: '/'},
-                    {title: '分类', path: '/web'}
-                  ]}
-                />
-              */}
+              <MoreDetailColumns
+                data={books.booksList.items}
+                title="新书速递"
+                actions={[
+                  {title: '更多', path: '/'},
+                  {title: '分类', path: '/web'}
+                ]}
+              />
+            */}
+            <ListBoxWrapper
+              data={books.booksList.items}
+              title="新书速递"
+              actions={[
+                {title: '更多', path: '/'},
+              ]}
+            />
             </Grid.Column>
             <Grid.Column width={6}>
               <RightSide />

@@ -1,6 +1,6 @@
 .box_wrapper {
   border-bottom: 1px solid #ccc;
-  margin-bottom: 8px;
+  margin-bottom: 14px;
 }
 .box_wrapper .box_title {
   padding-bottom: 6px;
@@ -12,19 +12,21 @@
   display: inline-block;
   margin-right: 8px;
 }
-#horizontal_item {
-  margin-left: 0 !important;
-  width: 50%;
-}
 .list .horizontal_item .image {
   width: 100px;
 }
-.layout_box .columns_image {
-  width: 90px;
-  height: 126px;
+.columns_image {
+  width: 115px;
+  /* height: 172px; */
 }
-.layout_box .columns_title {
+.columns_title {
   width: 100%;
-  text-align: center;
   margin-top: 6px;
+  text-align: left;
+}
+.columns_author {
+  width: 100%;
+  margin-top: 6px;
+  text-align: left;
+  display: inline-block;
 }
