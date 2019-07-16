@@ -7,7 +7,7 @@ import './index.css';
 const mapData = (arr) => {
   return arr&&arr.length>0?arr.map(i=> i):'';
 }
-@inject('todos')
+@inject('books')
 @observer
 class BookList extends React.Component{
   constructor(props) {
