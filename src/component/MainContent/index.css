@@ -1,22 +1,5 @@
-
-.book_list .item  {
-  margin-bottom: 30px;
-}
-.book_list .item .content {
-  margin-top: 6px;
-}
-.book_list .item .content .description {
-  margin-top: 6px;
-}
-.book_list .item .content .description .origin_title {
-  margin-bottom: 16px;
-  display: inline-block;
-}
-.book_list .item .content .description .appList_translator {
-  margin-bottom: 8px;
-}
-.book_list .item .content .description .appList_rating {
-  margin-bottom: 6px;
+.main_flex_wrapper {
+  display: flex;
 }
 
 

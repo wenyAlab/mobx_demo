@@ -21,7 +21,7 @@ class RightLayout extends React.Component{
   render(){
     const { books } = this.props;
     return (
-      <React.Fragment>
+      <div className="main_right">
         <div className="layout_box">
           <h3>热门标签</h3>
           {
@@ -46,7 +46,7 @@ class RightLayout extends React.Component{
           ]}
           />
         </div>
-      </React.Fragment>
+      </div>
 
     )
   }

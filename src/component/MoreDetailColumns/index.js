@@ -3,9 +3,9 @@ import { Image, Grid, List,Rating } from 'semantic-ui-react';
 
 import './index.css';
 
-const MoreDetailColumns = ({data, title, actions}) => (
+const MoreDetailColumns = ({data, title, actions, style}) => (
   <React.Fragment>
-    <div className="box_wrapper">
+    <div style={style&&style} className="box_wrapper">
       <span className="box_title">{title}</span>
       {actions.length>0&&actions.map(i => <a className="action_item" key={i.path} href={i.path}>{`${i.title}>>`}</a>)}
     </div>

@@ -6,7 +6,8 @@ import BookListItem from '../BookList'
 import MoreDetailColumns from '../MoreDetailColumns'
 import ListBoxWrapper from '../ListBoxWrapper'
 import RightSide from '../RightLayout';
-
+import LeftContent from '../LeftContent';
+import './index.css';
 
 @inject('books')
 @observer
@@ -22,37 +23,10 @@ class MainContent extends React.Component{
   render(){
     const { books} = this.props;
     return (
-      <React.Fragment>
-        <div>
-          <Grid>
-            <Grid.Column width={10}>
-            {/*
-              <List className="book_list">
-                <BookListItem bookList={books.booksList.items}/>
-              </List>
-              <MoreDetailColumns
-                data={books.booksList.items}
-                title="新书速递"
-                actions={[
-                  {title: '更多', path: '/'},
-                  {title: '分类', path: '/web'}
-                ]}
-              />
-            */}
-            <ListBoxWrapper
-              data={books.booksList.items}
-              title={<h3>新书速递</h3>}
-              actions={[
-                {title: '更多', path: '/'},
-              ]}
-            />
-            </Grid.Column>
-            <Grid.Column width={5}>
-              <RightSide />
-            </Grid.Column>
-          </Grid>
+        <div className="main_flex_wrapper">
+          <LeftContent/>
+          <RightSide />
         </div>
-      </React.Fragment>
 
     )
   }
