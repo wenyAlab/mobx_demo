@@ -1,0 +1,9 @@
+.info_title {
+  font-size: 18px;
+  color:#666;
+}
+.info_extra, .info_summary {
+  margin-top: 10px;
+  font-size: 12px;
+  color:#666;
+}

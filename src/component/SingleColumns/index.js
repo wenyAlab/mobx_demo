@@ -3,7 +3,7 @@ import { Image, Grid, List,Rating,Label } from 'semantic-ui-react';
 
 import './index.css';
 
-const MoreDetailColumns = ({data, title, actions, style}) => (
+const SingleColumns = ({data, title, actions, style}) => (
   <div className="col_two">
     <div style={style&&style} className="box_wrapper">
       <span className="box_title">{title}</span>
@@ -50,4 +50,4 @@ const MoreDetailColumns = ({data, title, actions, style}) => (
   </div>
 )
 
-export default MoreDetailColumns
+export default SingleColumns

@@ -18,6 +18,7 @@ class MainContent extends React.Component{
   componentDidMount(){
     const { books} = this.props;
     books.queryBooksList();
+    books.queryEBooksList();
   }
 
   render(){

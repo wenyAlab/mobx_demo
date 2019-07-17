@@ -6,9 +6,15 @@ class Books {
   @observable booksList={
     items: [],
   };
+  @observable ebooksList={
+    items: [],
+  };
 
   @action  queryBooksList = async () => {
     this.booksList = await BookApi.getBooksList();
+  }
+  @action  queryEBooksList = async () => {
+    this.ebooksList = await BookApi.getEBooksList();
   }
 }
 

@@ -3,11 +3,9 @@ import { observer, inject} from 'mobx-react';
 import {  Image, List} from 'semantic-ui-react';
 
 import { RatingComponent } from '../Rating';
+import { mapData } from '../method';
 import './index.css';
 
-const mapData = (arr) => {
-  return arr&&arr.length>0&&(arr.length>4?arr[0]:arr.map(i=> i));
-}
 @inject('books')
 @observer
 class BookList extends React.Component{

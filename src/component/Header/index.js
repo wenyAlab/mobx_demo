@@ -9,7 +9,7 @@ class Header extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      activeKey: 'store',
+      activeKey: '图书',
     }
   }
 
@@ -29,10 +29,10 @@ class Header extends React.Component{
         className="header_menu"
         >
           <Link to="/" >
-            <Menu.Item name='store' active={activeKey === 'store'} onClick={this.handleMenuClick} />
+            <Menu.Item name='图书' active={activeKey === '图书'} onClick={this.handleMenuClick} />
           </Link>
           <Link to="/about" >
-            <Menu.Item name='ebook' active={activeKey === 'ebook'} onClick={this.handleMenuClick} />
+            <Menu.Item name='音乐' active={activeKey === '音乐'} onClick={this.handleMenuClick} />
           </Link>
         </Menu>
       </div>

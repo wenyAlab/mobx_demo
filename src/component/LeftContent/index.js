@@ -10,6 +10,7 @@ import './index.css';
 class LeftContent extends React.Component {
   render(){
     const { books } = this.props;
+    console.log(books)
     return (
       <div className="main_left">
         <ListBoxWrapper
@@ -27,6 +28,14 @@ class LeftContent extends React.Component {
             {title: '非虚构类', path: '/about'},
           ]}
           style={{marginTop: 60}}
+        />
+        <ListBoxWrapper
+          data={books.ebooksList.items}
+          title={<h3>电子图书</h3>}
+          actions={[
+            {title: '查看全部', path: '/'},
+          ]}
+          eBook={true}
         />
       </div>
     )

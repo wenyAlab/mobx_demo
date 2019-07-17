@@ -1,14 +1,14 @@
-.box_wrapper {
+.col_two .box_wrapper {
   border-bottom: 1px solid #ccc;
   margin-bottom: 8px;
 }
-.box_wrapper .box_title {
+.col_two .box_wrapper .box_title {
   padding-bottom: 6px;
   display: inline-block;
   font-size: 18px;
   margin-right: 10px;
 }
-.box_wrapper .action_item {
+.col_two .box_wrapper .action_item {
   display: inline-block;
   margin-right: 8px;
 }
@@ -18,25 +18,29 @@
   margin-bottom: 20px;
 }
 
-.list .down_in_header{
+.col_two .list .down_in_header{
   display: inline-block;
   margin-top: 10px;
 }
-.list .down_in_header .origin_title{
+.col_two .list .down_in_header .origin_title{
   margin-top: 6px;
   display: inline-block;
 }
-.list .down_in_header .item_tags{
+.col_two .list .book_item_summary{
+  color: #6d6767;
+  margin-top: 8px;
+}
+.col_two .list .down_in_header .item_tags{
   margin-top: 6px;
 }
-.list .horizontal_item .image {
+.col_two .list .horizontal_item .image {
   width: 100px;
 }
-.columns_image {
+.col_two .columns_image {
   width: 80px;
-  height: auto;
+  height: 112px;
 }
-.columns_title {
+.col_two .columns_title {
   width: 100%;
   text-align: center;
   margin-top: 6px;
