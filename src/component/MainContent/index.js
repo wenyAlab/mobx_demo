@@ -1,6 +1,7 @@
 import React from 'react';
 import { observer, inject} from 'mobx-react';
 import {  Image, Grid, List} from 'semantic-ui-react';
+
 import BookListItem from '../BookList'
 import MoreDetailColumns from '../MoreDetailColumns'
 import ListBoxWrapper from '../ListBoxWrapper'
@@ -22,7 +23,7 @@ class MainContent extends React.Component{
     const { books} = this.props;
     return (
       <React.Fragment>
-        <div >
+        <div>
           <Grid>
             <Grid.Column width={10}>
             {/*
@@ -40,13 +41,13 @@ class MainContent extends React.Component{
             */}
             <ListBoxWrapper
               data={books.booksList.items}
-              title="新书速递"
+              title={<h3>新书速递</h3>}
               actions={[
                 {title: '更多', path: '/'},
               ]}
             />
             </Grid.Column>
-            <Grid.Column width={6}>
+            <Grid.Column width={5}>
               <RightSide />
             </Grid.Column>
           </Grid>

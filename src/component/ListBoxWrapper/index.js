@@ -1,5 +1,7 @@
-import React from 'react'
-import { Image, Grid } from 'semantic-ui-react'
+import React from 'react';
+import { Image, Grid } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
+
 import './index.css';
 
 const formatTitle = (title) => {
@@ -30,14 +32,16 @@ const ListBoxWrapper = ({data, title, actions}) => (
     <Grid>
       {
         data&&data.map(i => (
-          <Grid.Column key={i.id} width={3}>
-            <Image
-            src={i.image}
-            className="columns_image"
-            />
-            <a className="columns_title">
+          <Grid.Column style={{margin: '0 6px 6px 0', paddingRight:0}} key={i.id} width={3}>
+            <Link to={`/detail/${i.id}`}>
+              <img
+              src={i.image}
+              className="columns_image"
+              />
+            </Link>
+            <Link to={`/detail/${i.id}`} className="columns_title">
               {formatTitle(i.title)}
-            </a>
+            </Link>
             <div className="columns_author">
               {formatAuthor(i.author[0])}
             </div>

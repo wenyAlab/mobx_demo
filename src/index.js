@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import 'semantic-ui-css/semantic.min.css'
+import { Provider  } from 'mobx-react';
+import { BrowserRouter as Router } from 'react-router-dom';
+
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { Provider  } from 'mobx-react';
 import * as stores from './stores';
-import { BrowserRouter as Router } from 'react-router-dom';
+import './index.css';
 
 ReactDOM.render(
   <Provider {...stores}>

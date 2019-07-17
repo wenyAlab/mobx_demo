@@ -1,5 +1,6 @@
-import React from 'react'
-import { Image, Grid } from 'semantic-ui-react'
+import React from 'react';
+import { Image, Grid } from 'semantic-ui-react';
+
 import './index.css';
 
 const ColumnsList = ({data,title,actions}) => (

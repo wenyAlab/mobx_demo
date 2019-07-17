@@ -11,9 +11,6 @@ const colors = [
   '诗歌',
   '童话',
   '名著',
-  '港台',
-  '漫画',
-  '推理',
   '科幻',
 ]
 
@@ -26,14 +23,16 @@ class TagList extends React.Component{
     return (
       <React.Fragment>
         <div className="tag_list_title">{title}</div>
-        {colors.map(color => (
-          <Label className="tag_label" key={color} as='a'>
-            {color}
+        <div className="tag_collections">
+          {colors.map(color => (
+            <Label className="tag_label" key={color} as='a'>
+              {color}
+            </Label>
+          ))}
+          <Label className="tag_label" as='a'>
+            更多>>
           </Label>
-        ))}
-        <Label className="tag_label" as='a'>
-          更多>>
-        </Label>
+        </div>
       </React.Fragment>
 
     )

@@ -1,5 +1,10 @@
 .tag_list_title {
   margin-bottom: 10px;
+  color: #111;
+}
+.tag_collections {
+  border-bottom: 1px dashed #ccc;
+
 }
 
 .tag_label {

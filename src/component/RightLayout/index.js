@@ -1,11 +1,10 @@
 import React from 'react';
+import { observer, inject} from 'mobx-react';
 
 import TagList from '../TagList';
 import ColumnsList from '../ColumnsList';
 import {SimpleList} from '../SimpleList';
 import {bookData } from '../mock';
-import { observer, inject} from 'mobx-react';
-
 import './index.css';
 
 const tagList = [
@@ -30,8 +29,13 @@ class RightLayout extends React.Component{
           }
         </div>
         <div className="layout_box">
-          <h3>畅销图书榜</h3>
-          <SimpleList data={books.booksList.items}/>
+          <SimpleList 
+            data={books.booksList.items}
+            title="畅销图书榜"
+            actions={[
+              {title: '京东', path: '/'}
+            ]}
+          />
         </div>
         <div className="layout_box">
           <ColumnsList

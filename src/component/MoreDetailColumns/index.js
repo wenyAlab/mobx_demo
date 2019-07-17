@@ -1,6 +1,6 @@
 import React from 'react'
-import { Image, Grid, List,Rating } from 'semantic-ui-react'
-// import './index.css';
+import { Image, Grid, List,Rating } from 'semantic-ui-react';
+
 import './index.css';
 
 const MoreDetailColumns = ({data, title, actions}) => (

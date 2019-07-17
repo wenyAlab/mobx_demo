@@ -1,11 +1,11 @@
 import React from 'react';
 import { observer, inject} from 'mobx-react';
 import {  Image, List} from 'semantic-ui-react';
+
 import { RatingComponent } from '../Rating';
 import './index.css';
 
 const mapData = (arr) => {
-  // return arr&&arr.length>0?arr.map(i=> i):'';
   return arr&&arr.length>0&&(arr.length>4?arr[0]:arr.map(i=> i));
 }
 @inject('books')
