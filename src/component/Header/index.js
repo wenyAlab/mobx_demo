@@ -1,6 +1,8 @@
 import React from 'react';
 import { Menu } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 import './index.css';
+
 
 class Header extends React.Component{
   constructor(props){
@@ -25,8 +27,12 @@ class Header extends React.Component{
         secondary
         className="header_menu"
         >
-          <Menu.Item name='store' active={activeKey === 'store'} onClick={this.handleMenuClick} />
-          <Menu.Item name='ebook' active={activeKey === 'ebook'} onClick={this.handleMenuClick} />
+          <Link to="/" >
+            <Menu.Item name='store' active={activeKey === 'store'} onClick={this.handleMenuClick} />
+          </Link>
+          <Link to="/about" >
+            <Menu.Item name='ebook' active={activeKey === 'ebook'} onClick={this.handleMenuClick} />
+          </Link>
         </Menu>
       </div>
     )
