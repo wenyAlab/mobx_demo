@@ -1,10 +1,11 @@
 import React from 'react';
 import { observer, inject} from 'mobx-react';
+import {withRouter } from 'react-router-dom';
 
 import ListBoxWrapper from '../ListBoxWrapper';
 import MoreDetailColumns from '../MoreDetailColumns';
 import './index.css';
-
+@withRouter
 @inject('books')
 @observer
 class LeftContent extends React.Component {

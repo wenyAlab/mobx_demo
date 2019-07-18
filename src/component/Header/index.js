@@ -1,22 +1,25 @@
 import React from 'react';
 import { Menu } from 'semantic-ui-react';
-import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 import './index.css';
 
-
+@withRouter
 class Header extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      activeKey: '图书',
+      activeKey: 'book',
     }
   }
 
   handleMenuClick = (e, {name}) => {
+    const { history} = this.props;
     this.setState({
       activeKey: name,
     })
+    name==='book'&&history.push('/');
+    name==='music'&&history.push('/about');
   }
 
   render(){
@@ -28,12 +31,12 @@ class Header extends React.Component{
         secondary
         className="header_menu"
         >
-          <Link to="/" >
-            <Menu.Item name='图书' active={activeKey === '图书'} onClick={this.handleMenuClick} />
-          </Link>
-          <Link to="/about" >
-            <Menu.Item name='音乐' active={activeKey === '音乐'} onClick={this.handleMenuClick} />
-          </Link>
+          <Menu.Item name='book' active={activeKey === 'book'} onClick={this.handleMenuClick}>
+              图书
+          </Menu.Item>
+          <Menu.Item name='music' active={activeKey === 'music'} onClick={this.handleMenuClick}>
+              音乐
+          </Menu.Item>
         </Menu>
       </div>
     )
