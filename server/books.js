@@ -27,5 +27,19 @@ Router.get('/ebook_list', function(req, res) {
   }).skip(0).limit(10)
 
 })
+Router.post('/detail', function(req, res) {
+  const { id } = req.body;
+  console.log(req.body)
+  Books.find({id: id}, function(err, doc) {
+    if (err) {
+      return res.json({code: 500, data: [], message:'读取数据出错了'})
+    }
+    if (doc) {
+      return res.json({code: 200,done: true,data:doc})
+    }
+  // }).sort({id:-1}).skip(0).limit(10)
+  })
+
+})
 
 module.exports = Router;

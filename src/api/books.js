@@ -11,5 +11,8 @@ export default {
     },
     async getEBooksList(){
         return await axios.get('http://localhost:7000/books/ebook_list').then( ( res ) => res.data.data );
+    },
+    async getBookDetail(data){
+        return await axios.post('http://localhost:7000/books/detail', data).then( ( res ) => res.data.data );
     }
 }

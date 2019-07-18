@@ -10,7 +10,6 @@ import './index.css';
 class LeftContent extends React.Component {
   render(){
     const { books } = this.props;
-    console.log(books)
     return (
       <div className="main_left">
         <ListBoxWrapper
