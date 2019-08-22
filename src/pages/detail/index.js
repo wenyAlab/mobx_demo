@@ -4,14 +4,15 @@ import { observer, inject} from 'mobx-react';
 @observer
 class Detail extends React.Component{
   componentDidMount(){
-    const { books } = this.props;
+    const { books, match } = this.props;
     const payload = {
-      id: 1770782,
+      id: match.params&&match.params.id,
     }
     books.queryBooksDetail(payload);
   }
   render(){
-    return (<h2>detail</h2>)
+    const { books } = this.props;
+    return (books.booksDetail&&<h2>{books.booksDetail.title}</h2>)
   }
 }
 

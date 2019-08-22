@@ -2,11 +2,8 @@ import React from 'react';
 import { observer, inject} from 'mobx-react';
 import {  Image, Grid, List} from 'semantic-ui-react';
 
-import BookListItem from '../BookList'
-import MoreDetailColumns from '../MoreDetailColumns'
-import ListBoxWrapper from '../ListBoxWrapper'
-import RightSide from '../RightLayout';
-import LeftContent from '../LeftContent';
+import RightSide from '../component/RightLayout';
+import LeftContent from '../component/LeftContent';
 import './index.css';
 
 @inject('books')

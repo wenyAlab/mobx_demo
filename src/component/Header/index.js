@@ -19,7 +19,7 @@ class Header extends React.Component{
       activeKey: name,
     })
     name==='book'&&history.push('/');
-    name==='music'&&history.push('/about');
+    name==='music'&&history.push('/music');
   }
 
   render(){

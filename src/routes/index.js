@@ -1,15 +1,15 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import Detail from '../component/Detail';
-import About from '../component/About';
-import MainContent from '../component/MainContent';
+import Detail from '../pages/detail';
+import Music from '../pages/music';
+import MainContent from '../pages';
 
 const Main = () => (
   <Switch>
     <Route exact path="/" render={(props) => (<MainContent {...props}/>)}/>
     <Route path='/detail/:id' render={(props)=> (<Detail {...props}/>)}/>
-    <Route path="/about" component={About}/>
+    <Route path="/music" component={Music}/>
     <Route render={()=>(<h3>they can't all be winners!</h3>)}/>
   </Switch>
 )
