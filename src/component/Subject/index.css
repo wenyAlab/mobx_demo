@@ -1,0 +1,19 @@
+.subject_wrapper {
+  
+}
+.subject_wrapper .subject {
+  display: flex;
+}
+.subject_wrapper .subject_rate {
+  width: 155px;
+}
+.subject_wrapper .subject_avatar {
+  flex: 1 1 0;
+}
+.subject_wrapper .subject_info {
+  flex: 1 1 0;
+}
+.subject_wrapper .subject_avatar > img {
+  height: 200px;
+  width: auto;
+}

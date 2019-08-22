@@ -1,5 +1,8 @@
 import React from 'react';
 import { observer, inject} from 'mobx-react';
+
+import {Subject} from '../../component/Subject';
+
 @inject('books')
 @observer
 class Detail extends React.Component{
@@ -12,7 +15,18 @@ class Detail extends React.Component{
   }
   render(){
     const { books } = this.props;
-    return (books.booksDetail&&<h2>{books.booksDetail.title}</h2>)
+    return (
+        <div className="main_flex_wrapper">
+          <div className="main_left">
+            {
+              books.booksDetail&&<h2>{books.booksDetail.title}</h2>
+            }
+            <Subject/>
+          </div>
+          <div className="main_right">
+          </div>
+        </div>
+      )
   }
 }
 
