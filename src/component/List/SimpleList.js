@@ -20,6 +20,4 @@ const SimpleList = ({data, title, actions}) => (
   </React.Fragment>
 )
 
-export {
-  SimpleList
-}
+export default SimpleList

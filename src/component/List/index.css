@@ -1,0 +1,64 @@
+.grad_list_colums {
+  margin: 0 6px 6px 0;
+  padding-right: 0;
+}
+
+.columns_title {
+  width: 100%;
+  margin-top: 6px;
+  text-align: left;
+}
+.columns_author {
+  width: 100%;
+  margin-top: 6px;
+  text-align: left;
+  display: inline-block;
+}
+
+
+.layout_box .box_wrapper {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 16px;
+}
+.layout_box .box_wrapper .box_title {
+  padding-bottom: 8px;
+  display: inline-block;
+  font-size: 18px;
+  margin-right: 10px;
+}
+.layout_box .box_wrapper .action_item {
+  display: inline-block;
+  margin-right: 8px;
+}
+#horizontal_item {
+  margin-left: 0 !important;
+  width: 50%;
+}
+.layout_box .list .horizontal_item .image {
+  width: 100px;
+}
+.layout_box .columns_image {
+  width: 90px;
+  height: 126px;
+}
+.layout_box .columns_title {
+  width: 100%;
+  text-align: center;
+  margin-top: 6px;
+}
+
+
+/* tag list css*/
+
+.tag_list_title {
+  margin-bottom: 10px;
+  color: #111;
+}
+.tag_collections {
+  border-bottom: 1px dashed #ccc;
+
+}
+
+.tag_label {
+  margin-bottom: 4px !important;
+}

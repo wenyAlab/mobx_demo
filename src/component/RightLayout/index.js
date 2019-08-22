@@ -1,9 +1,8 @@
 import React from 'react';
 import { observer, inject} from 'mobx-react';
-
-import TagList from '../TagList';
+import SimpleList from '../List/SimpleList';
+import TagList from '../List/TagList';
 import ColumnsList from '../ColumnsList';
-import {SimpleList} from '../SimpleList';
 import {bookData } from '../mock';
 import './index.css';
 

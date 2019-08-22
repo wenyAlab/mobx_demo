@@ -1,14 +1,9 @@
 import React from 'react'
-import { Image, Grid, List,Rating,Label } from 'semantic-ui-react';
+import { Image, List,Rating,Label } from 'semantic-ui-react';
 
 import './index.css';
 
-const SingleColumns = ({data, title, actions, style}) => (
-  <div className="col_two">
-    <div style={style&&style} className="box_wrapper">
-      <span className="box_title">{title}</span>
-      {actions.length>0&&actions.map(i => <a className="action_item" key={i.path} href={i.path}>{`${i.title}>>`}</a>)}
-    </div>
+const SummaryList = ({data}) => (
     <List horizontal verticalAlign='top'>
       {
         data.length>0&&data.map(i => (
@@ -45,9 +40,6 @@ const SingleColumns = ({data, title, actions, style}) => (
         ))
       }
     </List>
-    
-
-  </div>
 )
 
-export default SingleColumns
+export default SummaryList
