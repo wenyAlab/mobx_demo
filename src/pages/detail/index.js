@@ -21,7 +21,7 @@ class Detail extends React.Component{
             {
               books.booksDetail&&<h2>{books.booksDetail.title}</h2>
             }
-            <Subject/>
+            <Subject data={books.booksDetail}/>
           </div>
           <div className="main_right">
           </div>

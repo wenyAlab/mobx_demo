@@ -1,6 +1,8 @@
 import React from 'react';
-import {RatingComponent} from '../Rating';
+import {BlockRate} from '../Rating/BlockRate';
 import {Progress, Grid} from 'semantic-ui-react';
+import { GradeProgress} from '../GradeProgress';
+
 import './index.css';
 
 const data = {
@@ -9,45 +11,45 @@ const data = {
 }
 class Subject  extends  React.Component{
   render(){
+    const { data } = this.props;
+    console.log(data)
     return (
-      <div className="subject_wrapper">
-        <Grid divided='vertically'>
-          <Grid.Row columns={2}>
-            <Grid.Column>
-              <div className="subject">
-                <div className="subject_avatar">
-                  <img src="https://img3.doubanio.com/view/subject/l/public/s33307240.jpg" alt="book_avatar"/>
-                </div>
-                <div className="subject_info">
-                  <span>测试</span><br/>
-                  <span>测试</span><br/>
-                  <span>测试</span><br/>
-                  <span>测试</span><br/>
-                  <span>测试</span>
-                </div>
-              </div>
-            </Grid.Column>
-            <Grid.Column>
-              <div className="subject_rate">
-                <div>豆瓣评分</div>
-                <div>
-                  <RatingComponent data={data}/>
-                </div>
-                <div>
-                  <ul>
-                    <li>5星  <Progress percent={44} progress size="small" /></li>
-                    <li>4星  <Progress percent={44} progress size="small" /></li>
-                    <li>3星  <Progress percent={44} progress size="small" /></li>
-                    <li>2星  <Progress percent={44} progress size="small" /></li>
-                    <li>1星  <Progress percent={44} progress size="small" /></li>
-                  </ul>
-                </div>
-              </div>
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
-        
-        
+      <div className="subject_wrapper clearfix">
+        {data&&
+          <React.Fragment>
+          <div className="subject">
+            <div className="subject_avatar">
+              <img src={data.image&&data.image} alt="book_avatar"/>
+            </div>
+            <div className="subject_info">
+              <span>作者：<a>{data.author&&data.author[0]}</a></span><br/>
+              <span>出版社：{data.publisher&&data.publisher}</span><br/>
+              <span>原作名：{data.publisher&&data.origin_title}</span><br/>
+              <span>译者：<a>{data.publisher&&data.translator[0]}</a></span><br/>
+              <span>出版年：{data.publisher&&data.pubdate}</span><br/>
+              <span>页数：{data.publisher&&data.pages}</span><br/>
+              <span>定价：{data.publisher&&data.price}</span><br/>
+              <span>装帧：{data.publisher&&data.binding}</span><br/>
+              <span>ISBN：{data.publisher&&data.isbn13}</span>
+            </div>
+          </div>
+          <div className="subject_rate">
+            <div>豆瓣评分</div>
+            <div>
+              <BlockRate data={data.rating&&data.rating}/>
+            </div>
+            <div>
+              <ul className="rate_progress_list">
+                <li>5星  <GradeProgress percent={50}/> 50%</li>
+                <li>4星  <GradeProgress percent={10}/> 10%</li>
+                <li>3星  <GradeProgress percent={20}/> 20%</li>
+                <li>2星  <GradeProgress percent={8}/> 8%</li>
+                <li>1星  <GradeProgress percent={12}/> 12%</li>
+              </ul>
+            </div>
+          </div>
+          </React.Fragment>
+        }
       </div>
     )
   }

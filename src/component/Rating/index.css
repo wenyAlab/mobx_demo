@@ -1,0 +1,14 @@
+.rate_box {
+  /* font-size: 28px; */
+  line-height: 2;
+}
+.rate_box .rate_num {
+  font-size: 28px;
+  float: left;
+  color: #000;
+  /* line-height: 2; */
+}
+.rate_box .rate_info {
+  float: left;
+  padding: 0px 10px;
+}

@@ -3,15 +3,27 @@
 }
 .subject_wrapper .subject {
   display: flex;
+  float: left;
+  width: 70%;
 }
 .subject_wrapper .subject_rate {
-  width: 155px;
+  width: 100%;
+  color: #9b9b9b;
+  float: right;
+  width: 30%;
+  border-left: 1px solid #ccc;
+  padding-left: 20px;
+}
+.subject_wrapper .subject_rate .rate_progress_list > li {
+  color: #9b9b9b;
 }
 .subject_wrapper .subject_avatar {
   flex: 1 1 0;
 }
 .subject_wrapper .subject_info {
-  flex: 1 1 0;
+  flex: 2 1 0;
+  color: #666666;
+  font-size: 13px;
 }
 .subject_wrapper .subject_avatar > img {
   height: 200px;
