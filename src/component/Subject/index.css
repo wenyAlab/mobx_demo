@@ -24,8 +24,19 @@
   flex: 2 1 0;
   color: #666666;
   font-size: 13px;
+  line-height: 21px;
 }
 .subject_wrapper .subject_avatar > img {
-  height: 200px;
+  height: 190px;
   width: auto;
 }
+.subject_content_wrapper {
+  color: #111;
+  
+}
+.subject_content_wrapper .subject_mini_title {
+  color: #007722;
+  font-size: 16px;
+  margin: 18px 0;
+}
+/* #007722 */

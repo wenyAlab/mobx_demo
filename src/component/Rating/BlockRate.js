@@ -10,7 +10,6 @@ const BlockRate = ({data}) => (
       <div>{`${data&&data.numRaters}人评价`}</div>
     </div>
    </div>
-  
 )
 
 export { BlockRate };

@@ -24,13 +24,14 @@ class Subject  extends  React.Component{
             <div className="subject_info">
               <span>作者：<a>{data.author&&data.author[0]}</a></span><br/>
               <span>出版社：{data.publisher&&data.publisher}</span><br/>
-              <span>原作名：{data.publisher&&data.origin_title}</span><br/>
-              <span>译者：<a>{data.publisher&&data.translator[0]}</a></span><br/>
-              <span>出版年：{data.publisher&&data.pubdate}</span><br/>
-              <span>页数：{data.publisher&&data.pages}</span><br/>
-              <span>定价：{data.publisher&&data.price}</span><br/>
-              <span>装帧：{data.publisher&&data.binding}</span><br/>
-              <span>ISBN：{data.publisher&&data.isbn13}</span>
+              <span>原作名：{data.origin_title&&data.origin_title}</span><br/>
+              <span>译者：<a>{data.translator&&data.translator[0]}</a></span><br/>
+              <span>出版年：{data.pubdate&&data.pubdate}</span><br/>
+              <span>页数：{data.pages&&data.pages}</span><br/>
+              <span>定价：{data.price&&data.price}</span><br/>
+              <span>装帧：{data.binding&&data.binding}</span><br/>
+              <span>丛书：<a>{data.series&&data.series.title}</a></span><br/>
+              <span>ISBN：{data.isbn13&&data.isbn13}</span>
             </div>
           </div>
           <div className="subject_rate">
@@ -40,11 +41,11 @@ class Subject  extends  React.Component{
             </div>
             <div>
               <ul className="rate_progress_list">
-                <li>5星  <GradeProgress percent={50}/> 50%</li>
-                <li>4星  <GradeProgress percent={10}/> 10%</li>
-                <li>3星  <GradeProgress percent={20}/> 20%</li>
-                <li>2星  <GradeProgress percent={8}/> 8%</li>
-                <li>1星  <GradeProgress percent={12}/> 12%</li>
+                <li>5星  <GradeProgress percent={57}/> 57.0%</li>
+                <li>4星  <GradeProgress percent={35.4}/> 35.4%</li>
+                <li>3星  <GradeProgress percent={6.9}/> 6.9%</li>
+                <li>2星  <GradeProgress percent={0.5}/> 0.5%</li>
+                <li>1星  <GradeProgress percent={0.2}/> 0.2%</li>
               </ul>
             </div>
           </div>
