@@ -9,10 +9,12 @@ import {Summary} from '../../component/Subject/Summary';
 class Detail extends React.Component{
   componentDidMount(){
     const { books, match } = this.props;
-    const payload = {
-      id: match.params&&match.params.id,
+    if (match.params) {
+      books.queryBooksDetail({
+        id: match.params&&match.params.id,
+      });
     }
-    books.queryBooksDetail(payload);
+
   }
   render(){
     const { books } = this.props;

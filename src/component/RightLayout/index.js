@@ -3,7 +3,6 @@ import { observer, inject} from 'mobx-react';
 import SimpleList from '../List/SimpleList';
 import TagList from '../List/TagList';
 import ColumnsList from '../ColumnsList';
-import {bookData } from '../mock';
 import './index.css';
 
 const tagList = [

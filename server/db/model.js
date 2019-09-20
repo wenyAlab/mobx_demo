@@ -11,6 +11,9 @@ mongoose.connection.on("error", () => {
 const models = {
   books:{
     // books: {type:Array, require: true}
+  },
+  book_review:{
+    // books: {type:Array, require: true}
   }
 }
 

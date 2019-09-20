@@ -14,5 +14,8 @@ export default {
     },
     async getBookDetail(data){
         return await axios.post('http://localhost:7000/books/detail', data).then( ( res ) => res.data.data );
+    },
+    async getBookReviews(data){
+        return await axios.post('https://api.douban.com/v2/book/1770782/reviews?apikey=0b2bdeda43b5688921839c8ecb20399b', data).then( ( res ) => res.data.data );
     }
 }

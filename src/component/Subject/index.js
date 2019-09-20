@@ -12,7 +12,6 @@ const data = {
 class Subject  extends  React.Component{
   render(){
     const { data } = this.props;
-    console.log(data)
     return (
       <div className="subject_wrapper clearfix">
         {data&&
